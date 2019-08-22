@@ -5,59 +5,61 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:helpers="clr-namespace:Hanselman.Helpers"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:pancake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
-    xmlns:models="clr-namespace:Hanselman.Models;assembly=Hanselman.Shared"
-    xmlns:viewmodels="clr-namespace:Hanselman.ViewModels"
-    Shell.NavBarIsVisible="{OnPlatform iOS=true, Default=false}"
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:models="clr-namespace:Hanselman.Models;assembly=Hanselman.Shared"
+    xmlns:pancake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+    xmlns:viewmodels="clr-namespace:Hanselman.ViewModels"
     ios:Page.UseSafeArea="True"
-    mc:Ignorable="d"
+    x:DataType="viewmodels:PodcastDetailsViewModel"
     BackgroundColor="{StaticResource WindowBackgroundColor}"
-    x:DataType="viewmodels:PodcastDetailsViewModel">
+    Shell.NavBarIsVisible="{OnPlatform iOS=true,
+                                       Default=false}"
+    mc:Ignorable="d">
     <d:ContentPage.BindingContext>
         <viewmodels:PodcastDetailsViewModel />
     </d:ContentPage.BindingContext>
     <ContentPage.Content>
         <Grid>
             <ListView
-                    BackgroundColor="{StaticResource WindowBackgroundColor}"
-                    CachingStrategy="RecycleElement"
-                    HasUnevenRows="True"
-                    ItemAppearing="ListView_ItemAppearing"
-                    ItemSelected="ListView_ItemSelected"
-                    ItemTapped="ListView_ItemTapped"
-                    ItemDisappearing="ListView_ItemDisappearing"
-                    d:TranslationY="68"
-                    ItemsSource="{Binding Episodes}">
+                d:TranslationY="68"
+                BackgroundColor="{StaticResource WindowBackgroundColor}"
+                CachingStrategy="RecycleElement"
+                HasUnevenRows="True"
+                ItemAppearing="ListView_ItemAppearing"
+                ItemDisappearing="ListView_ItemDisappearing"
+                ItemSelected="ListView_ItemSelected"
+                ItemTapped="ListView_ItemTapped"
+                ItemsSource="{Binding Episodes}">
                 <d:ListView.ItemsSource>
                     <x:Array Type="{x:Type models:PodcastEpisode}">
                         <models:PodcastEpisode
-                                Title="Inside a Tribe of Hackers with cryptographer Marcus J Carey"
-                                Date="Today"
-                                Description="This is a description for a podcast! It is pretty long, but that is awesome."
-                                EpisodeNumber="3"
-                                Duration="15 mins remaining" />
+                            Title="Inside a Tribe of Hackers with cryptographer Marcus J Carey"
+                            Date="Today"
+                            Description="This is a description for a podcast! It is pretty long, but that is awesome."
+                            EpisodeNumber="3"
+                            Duration="15 mins remaining" />
                         <models:PodcastEpisode
-                                Title="A love letter to language (and programming) with Eva Ferreira"
-                                Date="Monday"
-                                Description="This is a description for a podcast! It is pretty long, but that is awesome."
-                                EpisodeNumber="2"
-                                Duration="20 minutes" />
+                            Title="A love letter to language (and programming) with Eva Ferreira"
+                            Date="Monday"
+                            Description="This is a description for a podcast! It is pretty long, but that is awesome."
+                            EpisodeNumber="2"
+                            Duration="20 minutes" />
                         <models:PodcastEpisode
-                                Title="How galaxies evolve with Dr. Molly Peeples"
-                                Date="March 14th, 2019"
-                                Description="This is a description for a podcast! It is pretty long, but that is awesome."
-                                EpisodeNumber="1"
-                                Duration="34 mins remaining" />
+                            Title="How galaxies evolve with Dr. Molly Peeples"
+                            Date="March 14th, 2019"
+                            Description="This is a description for a podcast! It is pretty long, but that is awesome."
+                            EpisodeNumber="1"
+                            Duration="34 mins remaining" />
                     </x:Array>
                 </d:ListView.ItemsSource>
                 <ListView.Header>
                     <pancake:PancakeView
-                            BackgroundGradientStartColor="{StaticResource PrimaryColor}"
-                            BackgroundGradientEndColor="{StaticResource WindowBackgroundColor}"                            
-                            d:BackgroundColor="{StaticResource PrimaryColor}"
-                            BackgroundColor="{OnPlatform UWP={StaticResource PrimaryColor}, Default=Transparent}">
+                        d:BackgroundColor="{StaticResource PrimaryColor}"
+                        BackgroundColor="{OnPlatform UWP={StaticResource PrimaryColor},
+                                                     Default=Transparent}"
+                        BackgroundGradientEndColor="{StaticResource WindowBackgroundColor}"
+                        BackgroundGradientStartColor="{StaticResource PrimaryColor}">
                         <Grid
                             Padding="20"
                             ColumnSpacing="20"
@@ -124,78 +126,73 @@
                                     <ColumnDefinition Width="50" />
                                 </Grid.ColumnDefinitions>
                                 <Frame
-                                        Padding="0"
-                                        CornerRadius="40"
-                                        HasShadow="True"
-                                        HeightRequest="80"
-                                        HorizontalOptions="Center"
-                                        VerticalOptions="Center"
-                                        Visual="Material"
-                                        WidthRequest="80">
+                                    Padding="0"
+                                    CornerRadius="40"
+                                    HasShadow="True"
+                                    HeightRequest="80"
+                                    HorizontalOptions="Center"
+                                    VerticalOptions="Center"
+                                    Visual="Material"
+                                    WidthRequest="80">
                                     <Image
-                                            d:Source="scott.png"
-                                            Aspect="AspectFill"
-                                            HorizontalOptions="FillAndExpand"
-                                            Source="{Binding ArtworkUrl}" />
+                                        d:Source="scott.png"
+                                        Aspect="AspectFill"
+                                        HorizontalOptions="FillAndExpand"
+                                        Source="{Binding ArtworkUrl}" />
                                 </Frame>
                                 <StackLayout Grid.Column="1">
                                     <Label
-                                            FontAttributes="Bold"
-                                            FontSize="12"
-                                            Text="{Binding DisplayDate}"
-                                            TextColor="{StaticResource PrimaryColor}" />
+                                        FontAttributes="Bold"
+                                        FontSize="12"
+                                        Text="{Binding DisplayDate}"
+                                        TextColor="{StaticResource PrimaryColor}" />
                                     <Label
-                                            FontSize="16"
-                                            LineBreakMode="TailTruncation"
-                                            MaxLines="2"
-                                            Text="{Binding Title}" />
+                                        FontSize="16"
+                                        LineBreakMode="TailTruncation"
+                                        MaxLines="2"
+                                        Text="{Binding Title}" />
                                     <Label FontSize="12" Text="{Binding Duration}" />
                                 </StackLayout>
-                                <Image
-                                        Grid.Column="2"
-                                        HeightRequest="44"
-                                        HorizontalOptions="Center"
-                                        VerticalOptions="Center"
-                                        WidthRequest="44">
-                                    <Image.Source>
-                                        <FontImageSource
-                                                FontFamily="{DynamicResource MaterialFontFamily}"
-                                                Glyph="{StaticResource IconPlayCircleOutline}"
-                                                Size="44"
-                                                Color="{StaticResource PrimaryColor}" />
-
-                                    </Image.Source>
-                                </Image>
+                              <Image
+                                  Grid.Column="2"
+                                  HeightRequest="44"
+                                  HorizontalOptions="Center" 
+                                  Source="{FontImage FontFamily={StaticResource MaterialFontFamily},
+                                    Glyph={StaticResource IconPlayCircleOutline}, 
+                                    Color={StaticResource PrimaryColor},
+                                    Size=44}"
+                                  VerticalOptions="Center"
+                                  WidthRequest="44"/>
                             </Grid>
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
             <pancake:PancakeView
-                            BackgroundGradientStartColor="{StaticResource PrimaryColor}"
-                            BackgroundGradientEndColor="{StaticResource TransparentWindowBackgroundColor}"                            
-                            d:BackgroundColor="{StaticResource PrimaryColor}"
-                             x:Name="StackLayoutInfo"
-                             IsVisible="False"
-                             d:IsVisible="True"
-                             d:Opacity="1"
-                             Opacity="0"
-                             VerticalOptions="Start"
-                            BackgroundColor="{OnPlatform UWP={StaticResource PrimaryColor}, Default=Transparent}">
-                <StackLayout Padding="16"
-                             Orientation="Horizontal">
+                x:Name="StackLayoutInfo"
+                d:BackgroundColor="{StaticResource PrimaryColor}"
+                d:IsVisible="True"
+                d:Opacity="1"
+                BackgroundColor="{OnPlatform UWP={StaticResource PrimaryColor},
+                                             Default=Transparent}"
+                BackgroundGradientEndColor="{StaticResource TransparentWindowBackgroundColor}"
+                BackgroundGradientStartColor="{StaticResource PrimaryColor}"
+                IsVisible="False"
+                Opacity="0"
+                VerticalOptions="Start">
+                <StackLayout Padding="16" Orientation="Horizontal">
                     <Label
-                            d:Text="Hanselminutes"
-                            VerticalOptions="Center"
-                            FontSize="Medium"
-                            Text="{Binding Podcast.Title}" />
+                        d:Text="Hanselminutes"
+                        FontSize="Medium"
+                        Text="{Binding Podcast.Title}"
+                        VerticalOptions="Center" />
                     <Button
-                            Command="{Binding SubscribeCommand}"
-                            HorizontalOptions="EndAndExpand"
-                            Style="{OnPlatform iOS={StaticResource SubscribeButtonStyle},
-                                                Android={StaticResource SubscribeButtonStyle}}"
-                            Text="Subscribe"
-                            VerticalOptions="End" />
+                        Command="{Binding SubscribeCommand}"
+                        HorizontalOptions="EndAndExpand"
+                        Style="{OnPlatform iOS={StaticResource SubscribeButtonStyle},
+                                           Android={StaticResource SubscribeButtonStyle}}"
+                        Text="Subscribe"
+                        VerticalOptions="End" />
                 </StackLayout>
             </pancake:PancakeView>
             <Frame

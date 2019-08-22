@@ -5,6 +5,12 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
     <Application.Resources>
         <ResourceDictionary>
+
+            <!--<x:String x:Key="MaterialFontFamilyiOS">Material Design Icons</x:String>
+            <x:String x:Key="MaterialFontFamilyAndroid">materialdesignicons-webfont.ttf#Material Design Icons</x:String>
+            <x:String x:Key="MaterialFontFamilyUWP">Assets/Fonts/materialdesignicons-webfont.ttf#Material Design Icons</x:String>
+
+            <x:String x:Key="MaterialFontFamily"></x:String>-->
             <OnPlatform x:Key="MaterialFontFamily" x:TypeArguments="x:String">
                 <On Platform="iOS" Value="Material Design Icons" />
                 <On Platform="Android" Value="materialdesignicons-webfont.ttf#Material Design Icons" />
@@ -66,6 +72,13 @@
                 <Setter Property="Visual" Value="Material" />
                 <Setter Property="TextColor" Value="White" />
                 <Setter Property="Padding" Value="20,0" />
+            </Style>
+            <Style x:Key="EpisodeActionStyle" TargetType="ImageButton">
+                <Setter Property="BackgroundColor" Value="Transparent"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+                <Setter Property="HeightRequest" Value="24"/>
+                <Setter Property="WidthRequest" Value="24"/>
             </Style>
         </ResourceDictionary>
     </Application.Resources>

@@ -38,18 +38,18 @@
                     <GridItemsLayout Orientation="Vertical" Span="{OnIdiom Phone=1, Tablet=3, Desktop=3, TV=5, Watch=1}" />
                 </CollectionView.ItemsLayout>
                 <d:CollectionView.ItemsSource>
-                    <x:Array Type="{x:Type modelsShared:FeedItem}">
-                        <modelsShared:FeedItem
+                    <x:Array Type="{x:Type models:BlogFeedItem}">
+                        <models:BlogFeedItem
                             Title="Awesome Title"
                             Caption="This is a caption of the blog article."
                             FirstImage="scott.png"
                             PublishDate="Today" />
-                        <modelsShared:FeedItem
+                        <models:BlogFeedItem
                             Title="Awesome Title"
                             Caption="This is a caption of the blog article."
                             FirstImage="scott.png"
                             PublishDate="Today" />
-                        <modelsShared:FeedItem
+                        <models:BlogFeedItem
                             Title="Awesome Title"
                             Caption="This is a caption of the blog article."
                             FirstImage="scott.png"

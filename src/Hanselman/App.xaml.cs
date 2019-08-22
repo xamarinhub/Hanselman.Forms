@@ -24,6 +24,8 @@ namespace Hanselman
 
             Barrel.ApplicationId = AppInfo.PackageName;
 
+            //Resources["MaterialFontFamily"] = Resources[$"MaterialFontFamily{DeviceInfo.Platform}"];
+
             // The root page of your application
             if (DeviceInfo.Platform == DevicePlatform.UWP)
                 MainPage = new HomePage();

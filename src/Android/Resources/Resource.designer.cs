@@ -3228,7 +3228,6 @@ namespace HanselmanAndroid
 			global::MediaManager.Forms.Resource.Id.listMode = global::HanselmanAndroid.Resource.Id.listMode;
 			global::MediaManager.Forms.Resource.Id.list_item = global::HanselmanAndroid.Resource.Id.list_item;
 			global::MediaManager.Forms.Resource.Id.main_appbar = global::HanselmanAndroid.Resource.Id.main_appbar;
-			global::MediaManager.Forms.Resource.Id.main_scrollview = global::HanselmanAndroid.Resource.Id.main_scrollview;
 			global::MediaManager.Forms.Resource.Id.main_tablayout = global::HanselmanAndroid.Resource.Id.main_tablayout;
 			global::MediaManager.Forms.Resource.Id.main_toolbar = global::HanselmanAndroid.Resource.Id.main_toolbar;
 			global::MediaManager.Forms.Resource.Id.masked = global::HanselmanAndroid.Resource.Id.masked;
@@ -3326,7 +3325,6 @@ namespace HanselmanAndroid
 			global::MediaManager.Forms.Resource.Id.select_dialog_listview = global::HanselmanAndroid.Resource.Id.select_dialog_listview;
 			global::MediaManager.Forms.Resource.Id.selected = global::HanselmanAndroid.Resource.Id.selected;
 			global::MediaManager.Forms.Resource.Id.shellcontent_appbar = global::HanselmanAndroid.Resource.Id.shellcontent_appbar;
-			global::MediaManager.Forms.Resource.Id.shellcontent_scrollview = global::HanselmanAndroid.Resource.Id.shellcontent_scrollview;
 			global::MediaManager.Forms.Resource.Id.shellcontent_toolbar = global::HanselmanAndroid.Resource.Id.shellcontent_toolbar;
 			global::MediaManager.Forms.Resource.Id.shortcut = global::HanselmanAndroid.Resource.Id.shortcut;
 			global::MediaManager.Forms.Resource.Id.showCustom = global::HanselmanAndroid.Resource.Id.showCustom;
@@ -6186,9 +6184,9 @@ namespace HanselmanAndroid
 			global::Xamarin.Forms.Material.Android.Resource.Id.listMode = global::HanselmanAndroid.Resource.Id.listMode;
 			global::Xamarin.Forms.Material.Android.Resource.Id.list_item = global::HanselmanAndroid.Resource.Id.list_item;
 			global::Xamarin.Forms.Material.Android.Resource.Id.main_appbar = global::HanselmanAndroid.Resource.Id.main_appbar;
-			global::Xamarin.Forms.Material.Android.Resource.Id.main_scrollview = global::HanselmanAndroid.Resource.Id.main_scrollview;
 			global::Xamarin.Forms.Material.Android.Resource.Id.main_tablayout = global::HanselmanAndroid.Resource.Id.main_tablayout;
 			global::Xamarin.Forms.Material.Android.Resource.Id.main_toolbar = global::HanselmanAndroid.Resource.Id.main_toolbar;
+			global::Xamarin.Forms.Material.Android.Resource.Id.main_viewpager = global::HanselmanAndroid.Resource.Id.main_viewpager;
 			global::Xamarin.Forms.Material.Android.Resource.Id.masked = global::HanselmanAndroid.Resource.Id.masked;
 			global::Xamarin.Forms.Material.Android.Resource.Id.materialformsedittext = global::HanselmanAndroid.Resource.Id.materialformsedittext;
 			global::Xamarin.Forms.Material.Android.Resource.Id.media_actions = global::HanselmanAndroid.Resource.Id.media_actions;
@@ -6238,7 +6236,6 @@ namespace HanselmanAndroid
 			global::Xamarin.Forms.Material.Android.Resource.Id.select_dialog_listview = global::HanselmanAndroid.Resource.Id.select_dialog_listview;
 			global::Xamarin.Forms.Material.Android.Resource.Id.selected = global::HanselmanAndroid.Resource.Id.selected;
 			global::Xamarin.Forms.Material.Android.Resource.Id.shellcontent_appbar = global::HanselmanAndroid.Resource.Id.shellcontent_appbar;
-			global::Xamarin.Forms.Material.Android.Resource.Id.shellcontent_scrollview = global::HanselmanAndroid.Resource.Id.shellcontent_scrollview;
 			global::Xamarin.Forms.Material.Android.Resource.Id.shellcontent_toolbar = global::HanselmanAndroid.Resource.Id.shellcontent_toolbar;
 			global::Xamarin.Forms.Material.Android.Resource.Id.shortcut = global::HanselmanAndroid.Resource.Id.shortcut;
 			global::Xamarin.Forms.Material.Android.Resource.Id.showCustom = global::HanselmanAndroid.Resource.Id.showCustom;
@@ -6943,6 +6940,7 @@ namespace HanselmanAndroid
 			global::Xamarin.Forms.Material.Android.Resource.Style.XamarinFormsMaterialProgressBarHorizontal = global::HanselmanAndroid.Resource.Style.XamarinFormsMaterialProgressBarHorizontal;
 			global::Xamarin.Forms.Material.Android.Resource.Style.XamarinFormsMaterialSlider = global::HanselmanAndroid.Resource.Style.XamarinFormsMaterialSlider;
 			global::Xamarin.Forms.Material.Android.Resource.Style.XamarinFormsMaterialTheme = global::HanselmanAndroid.Resource.Style.XamarinFormsMaterialTheme;
+			global::Xamarin.Forms.Material.Android.Resource.Style.collectionViewStyle = global::HanselmanAndroid.Resource.Style.collectionViewStyle;
 			global::Xamarin.Forms.Material.Android.Resource.Styleable.ActionBar = global::HanselmanAndroid.Resource.Styleable.ActionBar;
 			global::Xamarin.Forms.Material.Android.Resource.Styleable.ActionBar_background = global::HanselmanAndroid.Resource.Styleable.ActionBar_background;
 			global::Xamarin.Forms.Material.Android.Resource.Styleable.ActionBar_backgroundSplit = global::HanselmanAndroid.Resource.Styleable.ActionBar_backgroundSplit;
@@ -8760,9 +8758,9 @@ namespace HanselmanAndroid
 			global::Xamarin.Forms.Platform.Android.Resource.Id.listMode = global::HanselmanAndroid.Resource.Id.listMode;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.list_item = global::HanselmanAndroid.Resource.Id.list_item;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.main_appbar = global::HanselmanAndroid.Resource.Id.main_appbar;
-			global::Xamarin.Forms.Platform.Android.Resource.Id.main_scrollview = global::HanselmanAndroid.Resource.Id.main_scrollview;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.main_tablayout = global::HanselmanAndroid.Resource.Id.main_tablayout;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.main_toolbar = global::HanselmanAndroid.Resource.Id.main_toolbar;
+			global::Xamarin.Forms.Platform.Android.Resource.Id.main_viewpager = global::HanselmanAndroid.Resource.Id.main_viewpager;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.masked = global::HanselmanAndroid.Resource.Id.masked;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.media_actions = global::HanselmanAndroid.Resource.Id.media_actions;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.message = global::HanselmanAndroid.Resource.Id.message;
@@ -8811,7 +8809,6 @@ namespace HanselmanAndroid
 			global::Xamarin.Forms.Platform.Android.Resource.Id.select_dialog_listview = global::HanselmanAndroid.Resource.Id.select_dialog_listview;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.selected = global::HanselmanAndroid.Resource.Id.selected;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.shellcontent_appbar = global::HanselmanAndroid.Resource.Id.shellcontent_appbar;
-			global::Xamarin.Forms.Platform.Android.Resource.Id.shellcontent_scrollview = global::HanselmanAndroid.Resource.Id.shellcontent_scrollview;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.shellcontent_toolbar = global::HanselmanAndroid.Resource.Id.shellcontent_toolbar;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.shortcut = global::HanselmanAndroid.Resource.Id.shortcut;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.showCustom = global::HanselmanAndroid.Resource.Id.showCustom;
@@ -9505,6 +9502,7 @@ namespace HanselmanAndroid
 			global::Xamarin.Forms.Platform.Android.Resource.Style.Widget_MaterialComponents_TextInputLayout_OutlinedBox_Dense = global::HanselmanAndroid.Resource.Style.Widget_MaterialComponents_TextInputLayout_OutlinedBox_Dense;
 			global::Xamarin.Forms.Platform.Android.Resource.Style.Widget_MaterialComponents_Toolbar = global::HanselmanAndroid.Resource.Style.Widget_MaterialComponents_Toolbar;
 			global::Xamarin.Forms.Platform.Android.Resource.Style.Widget_Support_CoordinatorLayout = global::HanselmanAndroid.Resource.Style.Widget_Support_CoordinatorLayout;
+			global::Xamarin.Forms.Platform.Android.Resource.Style.collectionViewStyle = global::HanselmanAndroid.Resource.Style.collectionViewStyle;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.ActionBar = global::HanselmanAndroid.Resource.Styleable.ActionBar;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.ActionBar_background = global::HanselmanAndroid.Resource.Styleable.ActionBar_background;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.ActionBar_backgroundSplit = global::HanselmanAndroid.Resource.Styleable.ActionBar_backgroundSplit;
@@ -14601,13 +14599,13 @@ namespace HanselmanAndroid
 			public const int main_appbar = 2131230845;
 			
 			// aapt resource value: 0x7F08007E
-			public const int main_scrollview = 2131230846;
+			public const int main_tablayout = 2131230846;
 			
 			// aapt resource value: 0x7F08007F
-			public const int main_tablayout = 2131230847;
+			public const int main_toolbar = 2131230847;
 			
 			// aapt resource value: 0x7F080080
-			public const int main_toolbar = 2131230848;
+			public const int main_viewpager = 2131230848;
 			
 			// aapt resource value: 0x7F080081
 			public const int masked = 2131230849;
@@ -14901,196 +14899,193 @@ namespace HanselmanAndroid
 			public const int shellcontent_appbar = 2131230944;
 			
 			// aapt resource value: 0x7F0800E1
-			public const int shellcontent_scrollview = 2131230945;
-			
-			// aapt resource value: 0x7F0800E2
-			public const int shellcontent_toolbar = 2131230946;
+			public const int shellcontent_toolbar = 2131230945;
 			
 			// aapt resource value: 0x7F080004
 			public const int SHIFT = 2131230724;
 			
+			// aapt resource value: 0x7F0800E2
+			public const int shortcut = 2131230946;
+			
 			// aapt resource value: 0x7F0800E3
-			public const int shortcut = 2131230947;
+			public const int showCustom = 2131230947;
 			
 			// aapt resource value: 0x7F0800E4
-			public const int showCustom = 2131230948;
+			public const int showHome = 2131230948;
 			
 			// aapt resource value: 0x7F0800E5
-			public const int showHome = 2131230949;
+			public const int showTitle = 2131230949;
 			
 			// aapt resource value: 0x7F0800E6
-			public const int showTitle = 2131230950;
+			public const int sliding_tabs = 2131230950;
 			
 			// aapt resource value: 0x7F0800E7
-			public const int sliding_tabs = 2131230951;
+			public const int smallLabel = 2131230951;
 			
 			// aapt resource value: 0x7F0800E8
-			public const int smallLabel = 2131230952;
+			public const int snackbar_action = 2131230952;
 			
 			// aapt resource value: 0x7F0800E9
-			public const int snackbar_action = 2131230953;
+			public const int snackbar_text = 2131230953;
 			
 			// aapt resource value: 0x7F0800EA
-			public const int snackbar_text = 2131230954;
+			public const int snap = 2131230954;
 			
 			// aapt resource value: 0x7F0800EB
-			public const int snap = 2131230955;
+			public const int snapMargins = 2131230955;
 			
 			// aapt resource value: 0x7F0800EC
-			public const int snapMargins = 2131230956;
+			public const int spacer = 2131230956;
 			
 			// aapt resource value: 0x7F0800ED
-			public const int spacer = 2131230957;
+			public const int spherical_view = 2131230957;
 			
 			// aapt resource value: 0x7F0800EE
-			public const int spherical_view = 2131230958;
+			public const int split_action_bar = 2131230958;
 			
 			// aapt resource value: 0x7F0800EF
-			public const int split_action_bar = 2131230959;
+			public const int src_atop = 2131230959;
 			
 			// aapt resource value: 0x7F0800F0
-			public const int src_atop = 2131230960;
+			public const int src_in = 2131230960;
 			
 			// aapt resource value: 0x7F0800F1
-			public const int src_in = 2131230961;
+			public const int src_over = 2131230961;
 			
 			// aapt resource value: 0x7F0800F2
-			public const int src_over = 2131230962;
+			public const int start = 2131230962;
 			
 			// aapt resource value: 0x7F0800F3
-			public const int start = 2131230963;
+			public const int status_bar_latest_event_content = 2131230963;
 			
 			// aapt resource value: 0x7F0800F4
-			public const int status_bar_latest_event_content = 2131230964;
+			public const int stretch = 2131230964;
 			
 			// aapt resource value: 0x7F0800F5
-			public const int stretch = 2131230965;
+			public const int submenuarrow = 2131230965;
 			
 			// aapt resource value: 0x7F0800F6
-			public const int submenuarrow = 2131230966;
+			public const int submit_area = 2131230966;
 			
 			// aapt resource value: 0x7F0800F7
-			public const int submit_area = 2131230967;
-			
-			// aapt resource value: 0x7F0800F8
-			public const int surface_view = 2131230968;
+			public const int surface_view = 2131230967;
 			
 			// aapt resource value: 0x7F080005
 			public const int SYM = 2131230725;
 			
+			// aapt resource value: 0x7F0800F8
+			public const int tabMode = 2131230968;
+			
 			// aapt resource value: 0x7F0800F9
-			public const int tabMode = 2131230969;
+			public const int tag_transition_group = 2131230969;
 			
 			// aapt resource value: 0x7F0800FA
-			public const int tag_transition_group = 2131230970;
+			public const int tag_unhandled_key_event_manager = 2131230970;
 			
 			// aapt resource value: 0x7F0800FB
-			public const int tag_unhandled_key_event_manager = 2131230971;
+			public const int tag_unhandled_key_listeners = 2131230971;
 			
 			// aapt resource value: 0x7F0800FC
-			public const int tag_unhandled_key_listeners = 2131230972;
+			public const int text = 2131230972;
 			
 			// aapt resource value: 0x7F0800FD
-			public const int text = 2131230973;
-			
-			// aapt resource value: 0x7F0800FE
-			public const int text2 = 2131230974;
-			
-			// aapt resource value: 0x7F080103
-			public const int textinput_counter = 2131230979;
-			
-			// aapt resource value: 0x7F080104
-			public const int textinput_error = 2131230980;
-			
-			// aapt resource value: 0x7F080105
-			public const int textinput_helper_text = 2131230981;
-			
-			// aapt resource value: 0x7F0800FF
-			public const int textSpacerNoButtons = 2131230975;
-			
-			// aapt resource value: 0x7F080100
-			public const int textSpacerNoTitle = 2131230976;
-			
-			// aapt resource value: 0x7F080101
-			public const int textStart = 2131230977;
-			
-			// aapt resource value: 0x7F080106
-			public const int texture_view = 2131230982;
+			public const int text2 = 2131230973;
 			
 			// aapt resource value: 0x7F080102
-			public const int text_input_password_toggle = 2131230978;
+			public const int textinput_counter = 2131230978;
+			
+			// aapt resource value: 0x7F080103
+			public const int textinput_error = 2131230979;
+			
+			// aapt resource value: 0x7F080104
+			public const int textinput_helper_text = 2131230980;
+			
+			// aapt resource value: 0x7F0800FE
+			public const int textSpacerNoButtons = 2131230974;
+			
+			// aapt resource value: 0x7F0800FF
+			public const int textSpacerNoTitle = 2131230975;
+			
+			// aapt resource value: 0x7F080100
+			public const int textStart = 2131230976;
+			
+			// aapt resource value: 0x7F080105
+			public const int texture_view = 2131230981;
+			
+			// aapt resource value: 0x7F080101
+			public const int text_input_password_toggle = 2131230977;
+			
+			// aapt resource value: 0x7F080106
+			public const int time = 2131230982;
 			
 			// aapt resource value: 0x7F080107
-			public const int time = 2131230983;
+			public const int title = 2131230983;
 			
 			// aapt resource value: 0x7F080108
-			public const int title = 2131230984;
+			public const int titleDividerNoCustom = 2131230984;
 			
 			// aapt resource value: 0x7F080109
-			public const int titleDividerNoCustom = 2131230985;
+			public const int title_template = 2131230985;
 			
 			// aapt resource value: 0x7F08010A
-			public const int title_template = 2131230986;
+			public const int toolbar = 2131230986;
 			
 			// aapt resource value: 0x7F08010B
-			public const int toolbar = 2131230987;
+			public const int top = 2131230987;
 			
 			// aapt resource value: 0x7F08010C
-			public const int top = 2131230988;
+			public const int topPanel = 2131230988;
 			
 			// aapt resource value: 0x7F08010D
-			public const int topPanel = 2131230989;
+			public const int touch_outside = 2131230989;
 			
 			// aapt resource value: 0x7F08010E
-			public const int touch_outside = 2131230990;
+			public const int transition_current_scene = 2131230990;
 			
 			// aapt resource value: 0x7F08010F
-			public const int transition_current_scene = 2131230991;
+			public const int transition_layout_save = 2131230991;
 			
 			// aapt resource value: 0x7F080110
-			public const int transition_layout_save = 2131230992;
+			public const int transition_position = 2131230992;
 			
 			// aapt resource value: 0x7F080111
-			public const int transition_position = 2131230993;
+			public const int transition_scene_layoutid_cache = 2131230993;
 			
 			// aapt resource value: 0x7F080112
-			public const int transition_scene_layoutid_cache = 2131230994;
+			public const int transition_transform = 2131230994;
 			
 			// aapt resource value: 0x7F080113
-			public const int transition_transform = 2131230995;
+			public const int uniform = 2131230995;
 			
 			// aapt resource value: 0x7F080114
-			public const int uniform = 2131230996;
+			public const int unlabeled = 2131230996;
 			
 			// aapt resource value: 0x7F080115
-			public const int unlabeled = 2131230997;
+			public const int up = 2131230997;
 			
 			// aapt resource value: 0x7F080116
-			public const int up = 2131230998;
+			public const int useLogo = 2131230998;
 			
 			// aapt resource value: 0x7F080117
-			public const int useLogo = 2131230999;
+			public const int view_offset_helper = 2131230999;
 			
 			// aapt resource value: 0x7F080118
-			public const int view_offset_helper = 2131231000;
+			public const int visible = 2131231000;
 			
 			// aapt resource value: 0x7F080119
-			public const int visible = 2131231001;
+			public const int volume_item_container = 2131231001;
 			
 			// aapt resource value: 0x7F08011A
-			public const int volume_item_container = 2131231002;
+			public const int when_playing = 2131231002;
 			
 			// aapt resource value: 0x7F08011B
-			public const int when_playing = 2131231003;
+			public const int withText = 2131231003;
 			
 			// aapt resource value: 0x7F08011C
-			public const int withText = 2131231004;
+			public const int wrap_content = 2131231004;
 			
 			// aapt resource value: 0x7F08011D
-			public const int wrap_content = 2131231005;
-			
-			// aapt resource value: 0x7F08011E
-			public const int zoom = 2131231006;
+			public const int zoom = 2131231005;
 			
 			static Id()
 			{
@@ -16446,6 +16441,9 @@ namespace HanselmanAndroid
 			
 			// aapt resource value: 0x7F0D00C4
 			public const int CardView_Light = 2131558596;
+			
+			// aapt resource value: 0x7F0D0212
+			public const int collectionViewStyle = 2131558930;
 			
 			// aapt resource value: 0x7F0D00C5
 			public const int ExoMediaButton = 2131558597;
