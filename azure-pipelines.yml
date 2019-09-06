@@ -95,7 +95,6 @@ jobs:
         # Write your commands here
         
         sed -i '' "s/APPCENTER_IOS/$APPCENTER_IOS/g" $APP_DIRECTORY/src/Hanselman/App.xaml.cs
-        
         displayName: 'Update App Center iOS Variables'
         env:
           APPCENTER_IOS: $(APPCENTER_IOS)
