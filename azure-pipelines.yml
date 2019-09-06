@@ -1,0 +1,161 @@
+
+variables:
+  BuildConfiguration: 'Release'
+
+jobs:
+
+  - job: build_android
+    displayName: Android Agent Job
+    pool:
+      name: Azure Pipelines
+      vmImage: macOS-10.14
+      demands:
+      - MSBuild
+      - Xamarin.Android
+      - JDK
+      
+    steps:
+      - task: UseDotNet@2
+        displayName: 'Use .Net Core sdk 2.2.x'
+        inputs:
+          version: 2.2.x
+          includePreviewVersions: false
+
+      - bash: |
+        # Write your commands here
+        
+        sed -i '' "s/APPCENTER_ANDROID/$APPCENTER_ANDROID/g" $APP_DIRECTORY/src/Hanselman/App.xaml.cs
+        displayName: 'Update App Center Variable'
+        env:
+          APPCENTER_ANDROID: $(APPCENTER_ANDROID)
+          APP_DIRECTORY: $(Build.Repository.LocalPath)
+
+      - task: vs-publisher-473885.motz-mobile-buildtasks.android-manifest-version.android-manifest-version@1
+        displayName: 'Bump Android Versions'
+        inputs:
+          sourcePath: src/Android/Properties/AndroidManifest.xml
+          printFile: false
+
+      - task: NuGetToolInstaller@0
+        displayName: 'Use NuGet 4.9.3'
+        inputs:
+          versionSpec: 4.9.3
+
+      - task: pjcollins.azp-utilities-boots.boots.Boots@1
+        displayName: 'Install Mono 6.4'
+        inputs:
+          uri: 'https://download.mono-project.com/archive/6.4.0/macos-10-universal/MonoFramework-MDK-6.4.0.187.macos10.xamarin.universal.pkg'
+
+      - task: pjcollins.azp-utilities-boots.boots.Boots@1
+        displayName: 'Install Android 16.3'
+        inputs:
+          uri: 'https://aka.ms/xamarin-android-commercial-d16-3-macos'
+
+      - task: XamarinAndroid@1
+        displayName: 'Build Android App'
+        inputs:
+          projectFile: src/Android/Hanselman.Android.csproj
+          outputDirectory: '$(build.binariesdirectory)/$(BuildConfiguration)'
+          configuration: '$(BuildConfiguration)'
+          msbuildArguments: /restore
+        continueOnError: true
+
+      - task: AndroidSigning@3
+        displayName: 'Signing and aligning APK file'
+        inputs:
+          apkFiles: '$(Parameters.appFiles)'
+          apksignerKeystoreFile: '220840c8-f1b6-4add-bd15-8c92aba2d0ca'
+          apksignerKeystorePassword: '$(KeystorePassword)'
+          apksignerKeystoreAlias: '$(KeystoreAlias)'
+          apksignerKeyPassword: '$(KeystorePassword)'
+
+      - task: PublishBuildArtifacts@1
+        displayName: 'Publish Artifact: drop-android'
+        inputs:
+          PathtoPublish: '$(build.binariesdirectory)/$(BuildConfiguration)'
+          ArtifactName: 'drop-android'
+
+  - job: build_ios
+    displayName: iOS Agent Job
+    pool:
+      name: Azure Pipelines
+      vmImage: macOS-10.14
+      demands:
+      - xcode
+      - Xamarin.iOS
+
+    steps:
+      - task: UseDotNet@2
+        displayName: 'Use .Net Core sdk 2.2.x'
+        inputs:
+          version: 2.2.x
+          includePreviewVersions: true
+
+      - bash: |
+        # Write your commands here
+        
+        sed -i '' "s/APPCENTER_IOS/$APPCENTER_IOS/g" $APP_DIRECTORY/src/Hanselman/App.xaml.cs
+        displayName: 'Update App Center Variables'
+        env:
+          APPCENTER_IOS: $(APPCENTER_IOS)
+          APP_DIRECTORY: $(Build.Repository.LocalPath)
+
+      - task: vs-publisher-473885.motz-mobile-buildtasks.ios-bundle-version.ios-bundle-version@1
+        displayName: 'Bump iOS Versions'
+        inputs:
+          sourcePath: src/iOS/Info.plist
+          versionCodeOffset: 0
+          printFile: false
+
+      - task: InstallAppleProvisioningProfile@1
+        displayName: 'Install an Apple provisioning profile'
+        inputs:
+          provProfileSecureFile: '291b8399-1fb4-44f3-a048-01baa250d36d'
+
+      - task: InstallAppleCertificate@2
+        displayName: 'Install an Apple certificate'
+        inputs:
+          certSecureFile: '3c1f66e8-5bbd-49f4-b970-ed471c78bf96'
+          certPwd: '$(P12Password)'
+
+      - task: NuGetToolInstaller@0
+        displayName: 'Use NuGet 4.9.3'
+        inputs:
+          versionSpec: 4.9.3
+
+      - task: pjcollins.azp-utilities-boots.boots.Boots@1
+        displayName: 'Install Mono 6.0'
+        inputs:
+          uri: 'https://download.mono-project.com/archive/6.0.0/macos-10-universal/MonoFramework-MDK-6.0.0.313.macos10.xamarin.universal.pkg'
+
+      - task: pjcollins.azp-utilities-boots.boots.Boots@1
+        displayName: 'Install iOS 16.2'
+        inputs:
+          uri: 'https://bosstoragemirror.blob.core.windows.net/wrench/jenkins/xcode10.3/72cb587a39c12dfaa20cd5a0b1eb60a908ff88a6/1/package/xamarin.ios-12.14.0.113.pkg'
+
+      - task: NuGetCommand@2
+        displayName: 'NuGet restore'
+        inputs:
+          restoreSolution: '$(Parameters.restorePkgSolution)'
+
+      - task: XamariniOS@2
+        displayName: 'Build iOS App'
+        inputs:
+          solutionFile: src/Hanselman.Forms.iOS.sln
+          configuration: '$(BuildConfiguration)'
+          runNugetRestore: true
+
+      - task: CopyFiles@2
+        displayName: 'Copy Files to: $(build.artifactstagingdirectory)'
+        inputs:
+          SourceFolder: '$(system.defaultworkingdirectory)'
+          Contents: |
+          **/*.ipa
+          **/*.dSYM
+          TargetFolder: '$(build.artifactstagingdirectory)'
+
+      - task: PublishBuildArtifacts@1
+        displayName: 'Publish Artifact: drop'
+        inputs:
+          PathtoPublish: '$(build.artifactstagingdirectory)'
+          ArtifactName: 'drop-ios'
