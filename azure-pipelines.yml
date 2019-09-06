@@ -25,7 +25,7 @@ jobs:
         # Write your commands here
         
         sed -i '' "s/APPCENTER_ANDROID/$APPCENTER_ANDROID/g" $APP_DIRECTORY/src/Hanselman/App.xaml.cs
-        displayName: 'Update App Center Variable'
+        displayName: 'Update App Center Android Variable'
         env:
           APPCENTER_ANDROID: $(APPCENTER_ANDROID)
           APP_DIRECTORY: $(Build.Repository.LocalPath)
@@ -95,7 +95,8 @@ jobs:
         # Write your commands here
         
         sed -i '' "s/APPCENTER_IOS/$APPCENTER_IOS/g" $APP_DIRECTORY/src/Hanselman/App.xaml.cs
-        displayName: 'Update App Center Variables'
+        
+        displayName: 'Update App Center iOS Variables'
         env:
           APPCENTER_IOS: $(APPCENTER_IOS)
           APP_DIRECTORY: $(Build.Repository.LocalPath)
