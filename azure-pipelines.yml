@@ -150,9 +150,9 @@ jobs:
         inputs:
           SourceFolder: '$(system.defaultworkingdirectory)'
           Contents: |
-          **/*.ipa
-          **/*.dSYM
-          TargetFolder: '$(build.artifactstagingdirectory)'
+            **/*.ipa
+            **/*.dSYM
+            TargetFolder: '$(build.artifactstagingdirectory)'
 
       - task: PublishBuildArtifacts@1
         displayName: 'Publish Artifact: drop'
